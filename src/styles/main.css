@@ -206,7 +206,7 @@ footer {
   --overlay-bg: #000a;
 
   align-self: stretch;
-  background: center url('/src/assets/img/ferns.webp') var(--accent-1);
+  background: center url('../assets/img/ferns.webp') var(--accent-1);
   background-size: cover;
   color: var(--brand-white);
 
