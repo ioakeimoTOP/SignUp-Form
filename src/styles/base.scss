@@ -10,6 +10,10 @@
   border-radius: inherit;
 }
 
+// * {
+//   border: 1px solid red;
+// }
+
 body {
   display: flex;
   min-height: 100svh;
@@ -19,24 +23,12 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-header,
-main,
 footer {
   padding: 1rem 2rem;
 }
 
-header,
 footer {
   background: var(--brand);
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  z-index: 1;
-  box-shadow: 0 -0.25rem 1.5rem var(--text);
 }
 
 .logo {
@@ -46,36 +38,14 @@ header {
 
 main {
   flex-grow: 1;
+  @include center-flex();
+  flex-wrap: wrap;
+
+  color: var(--text);
 }
 
 footer {
   @include center-flex();
   flex-direction: column;
-  color: var(--brand-white);
   font-weight: bold;
-}
-
-.surface {
-  padding: 2em 4em;
-  background: var(--accent-1);
-  box-shadow: 0 0 0.25rem var(--accent-shadow);
-  border-radius: 1rem;
-  color: var(--text);
-
-  & > .elevation {
-    @include elevate();
-    background: var(--accent-2);
-    & > .elevation {
-      @include elevate();
-      background: var(--accent-3);
-      & > .elevation {
-        @include elevate();
-        background: var(--accent-4);
-      }
-    }
-  }
-}
-
-p {
-  padding: 0.5rem 1rem;
 }

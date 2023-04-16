@@ -10,26 +10,122 @@
     <link rel="stylesheet" href="./src/styles/main.css" />
     <script src="./src/scripts/index.js" defer></script>
 
-    <title>Project Title</title>
+    <style>
+      @font-face {
+        font-family: 'Norse Bold';
+        src: url('./src/assets/fonts/Norse-Bold.woff2') format('woff2');
+        font-weight: bold;
+      }
+    </style>
+
+    <title>SignUp Form</title>
   </head>
   <body class="light">
     <header>
-      <div class="logo"><h1>LOGO</h1></div>
       <input type="checkbox" name="theme-toggle" id="theme-toggle" />
     </header>
     <main>
-      <section class="surface">
-        <p>Surface</p>
-        <div class="elevation">
-          <p>Elevation 1</p>
-          <div class="elevation">
-            <p>Elevation 2</p>
-            <div class="elevation">
-              <p>Elevation 3</p>
-            </div>
-          </div>
+      <div class="graphic">
+        <div class="graphic__overlay logo">
+          <img
+            class="logo__icon"
+            src="./src/assets/img/odin.webp"
+            alt="A line-art illustration of Odin"
+            width="380"
+            height="508"
+          />
+          <h1 class="logo__text">ODIN</h1>
         </div>
-      </section>
+        <div class="graphic__credits">
+          <p>"Ferns in the Washington forest"</p>
+          <p>
+            by:
+            <a href="https://unsplash.com/@haliewestphoto" target="_blank"
+              >Hallie West</a
+            >
+            on
+            <a href="https://unsplash.com/photos/25xggax4bSA" target="_blank"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="form_container">
+        <form id="signup-form" class="signup" action="">
+          <h2 class="signup__heading">Let's do this!</h2>
+          <ul class="signup__fieldset">
+            <li class="signup__field">
+              <label for="first_name">First Name</label>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                autocomplete="given-name"
+                required
+              />
+              <span></span>
+            </li>
+            <li class="signup__field">
+              <label for="last_name">Last Name</label>
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                autocomplete="family-name"
+                required
+              />
+              <span></span>
+            </li>
+            <li class="signup__field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+              />
+              <span></span>
+            </li>
+            <li class="signup__field">
+              <label for="phone_number">Phone Number</label>
+              <input
+                type="tel"
+                id="phone_number"
+                name="phone_number"
+                autocomplete="tel"
+              />
+            </li>
+            <li class="signup__field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="new-password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_]).{8,12}$"
+                required
+              />
+              <span></span>
+            </li>
+            <li class="signup__field">
+              <label for="confirm_password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                autocomplete="new-password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_]).{8,12}$"
+                required
+              />
+              <span></span>
+            </li>
+          </ul>
+        </form>
+        <button type="submit" form="signup-form" class="signup__submit">
+          Create Account
+        </button>
+      </div>
     </main>
     <footer>
       <!-- <h4>Credits:</h4> -->

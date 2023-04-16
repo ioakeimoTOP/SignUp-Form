@@ -1,36 +1,32 @@
 :root {
   /* Main Theme Hue */
-  --brand-hue: 220;
-  --brand-white: hsl(var(--brand-hue) 100% 95%);
-  --brand-black: hsl(var(--brand-hue) 100% 10%);
+  --brand-hue: 92;
+  --brand-white: hsl(var(--brand-hue) 100% 90%);
+  --brand-black: hsl(var(--brand-hue) 100% 15%);
 }
 
 .light {
-  --brand: hsl(var(--brand-hue) 80% 45%);
+  --brand: hsl(var(--brand-hue) 80% 40%);
 
   --text: var(--brand-black);
+  --text-inverse: var(--brand-white);
 
-  --accent-saturation: 45%;
-  --accent-1: hsl(var(--brand-hue) var(--accent-saturation) 75%);
-  --accent-2: hsl(var(--brand-hue) var(--accent-saturation) 80%);
-  --accent-3: hsl(var(--brand-hue) var(--accent-saturation) 85%);
-  --accent-4: hsl(var(--brand-hue) var(--accent-saturation) 90%);
+  --accent-saturation: 20%;
+  --accent-1: hsl(var(--brand-hue) var(--accent-saturation) 35%);
 
-  --accent-shadow: hsla(var(--brand-hue), 100%, 20%, 0.25);
+  --accent-shadow: hsla(var(--brand-hue), 100%, 10%, 0.5);
 }
 
 @mixin dark {
-  --brand: hsl(var(--brand-hue) 80% 40%);
+  --brand: hsl(var(--brand-hue) 80% 20%);
 
   --text: var(--brand-white);
+  --text-inverse: var(--brand-black);
 
   --accent-saturation: 25%;
   --accent-1: hsl(var(--brand-hue) var(--accent-saturation) 20%);
-  --accent-2: hsl(var(--brand-hue) var(--accent-saturation) 25%);
-  --accent-3: hsl(var(--brand-hue) var(--accent-saturation) 30%);
-  --accent-4: hsl(var(--brand-hue) var(--accent-saturation) 35%);
 
-  --accent-shadow: hsla(var(--brand-hue), 100%, 20%, 0.25);
+  --accent-shadow: hsla(var(--brand-hue), 100%, 90%, 0.5);
 }
 
 .dark {
@@ -44,15 +40,18 @@
 }
 
 #theme-toggle {
+  align-self: flex-end;
   appearance: none;
   outline: none;
-  position: relative;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
   width: 4rem;
   height: 2rem;
   border-radius: 1rem;
-  border: 4px solid var(--accent-4);
+  border: 4px solid var(--accent-1);
   cursor: pointer;
-  background: var(--accent-1);
+  background: hsl(210, 100%, 85%);
 
   /* Toggle Indicator */
   &::after {
@@ -84,7 +83,7 @@
 
   &:not(:focus):hover,
   &:active {
-    background: hsl(210, 100%, 30%);
+    background: hsl(210, 100%, 40%);
     &::after {
       left: 50%;
       transform: translateX(-50%);
