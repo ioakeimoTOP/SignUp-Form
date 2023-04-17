@@ -334,9 +334,19 @@ input {
   color: var(--brand-white);
 }
 
+.signup__action {
+  margin: 4vh var(--gap);
+}
+
+.signup__action a {
+  /* text-decoration: none;*/
+  font-weight: bold;
+  color: var(--text);
+}
+
 .signup__submit {
+  margin: 1vh 0;
   padding: 0.5rem 2rem;
-  margin: 5vh var(--gap);
   border-radius: 0.5rem;
   background: var(--text);
 
