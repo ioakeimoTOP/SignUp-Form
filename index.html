@@ -51,6 +51,10 @@
         </div>
       </div>
       <div class="form_container">
+        <h1 class="call_to_action">
+          This is definitely not a real service but you still want it. Sign Up
+          now and enjoy the benefits!
+        </h1>
         <form id="signup-form" class="signup" action="">
           <h2 class="signup__heading">Let's do this!</h2>
           <ul class="signup__fieldset">
@@ -63,7 +67,7 @@
                 autocomplete="given-name"
                 required
               />
-              <span></span>
+              <span class="signup__field-required"></span>
             </li>
             <li class="signup__field">
               <label for="last_name">Last Name</label>
@@ -74,7 +78,7 @@
                 autocomplete="family-name"
                 required
               />
-              <span></span>
+              <span class="signup__field-required"></span>
             </li>
             <li class="signup__field">
               <label for="email">Email</label>
@@ -85,7 +89,7 @@
                 autocomplete="email"
                 required
               />
-              <span></span>
+              <span class="signup__field-required"></span>
             </li>
             <li class="signup__field">
               <label for="phone_number">Phone Number</label>
@@ -96,29 +100,85 @@
                 autocomplete="tel"
               />
             </li>
-            <li class="signup__field">
+            <li class="signup__field password">
               <label for="password">Password</label>
               <input
                 type="password"
                 id="password"
                 name="password"
                 autocomplete="new-password"
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_]).{8,12}$"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,20}$"
                 required
               />
-              <span></span>
+              <span class="signup__field-required"></span>
+              <input
+                type="checkbox"
+                title="Show password"
+                class="password__toggle"
+              />
+              <meter
+                class="password__strength"
+                min="0"
+                max="5"
+                low="5"
+                optimum="5"
+                value="0"
+              ></meter>
+              <dl aria-hidden="false" aria-live="polite" class="validation">
+                <dt>Password should contain:</dt>
+                <dd
+                  id="validation__lowercase"
+                  aria-hidden="false"
+                  class="validation__criterion"
+                >
+                  Lowercase (a-z)
+                </dd>
+                <dd
+                  id="validation__uppercase"
+                  aria-hidden="false"
+                  class="validation__criterion"
+                >
+                  Uppercase (A-Z)
+                </dd>
+                <dd
+                  id="validation__number"
+                  aria-hidden="false"
+                  class="validation__criterion"
+                >
+                  Number (0-9)
+                </dd>
+                <dd
+                  id="validation__special"
+                  aria-hidden="false"
+                  class="validation__criterion"
+                >
+                  Special (!@#$%^&*)
+                </dd>
+                <dd
+                  id="validation__length"
+                  aria-hidden="false"
+                  class="validation__criterion"
+                >
+                  8 to 20 characters
+                </dd>
+              </dl>
             </li>
-            <li class="signup__field">
+            <li class="signup__field password">
               <label for="confirm_password">Confirm Password</label>
               <input
                 type="password"
                 id="confirm_password"
                 name="confirm_password"
                 autocomplete="new-password"
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_]).{8,12}$"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,20}$"
                 required
               />
-              <span></span>
+              <span class="signup__field-required"></span>
+              <input
+                type="checkbox"
+                title="Show password"
+                class="password__toggle"
+              />
             </li>
           </ul>
         </form>
