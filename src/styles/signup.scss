@@ -117,7 +117,7 @@ input {
       border: var(--border-size) solid #e5e7eb;
 
       &[pattern]:invalid:not(:focus) {
-        border: var(--border-size) solid red;
+        border: var(--border-size) solid orangered;
       }
 
       &:focus {
@@ -220,14 +220,7 @@ input {
 .validation {
   font-weight: bold;
 
-  & > dt {
-    font-size: 0.85rem;
-    margin-top: 1em;
-  }
-
-  & > dd {
-    font-size: 0.75rem;
-  }
+  font-size: 0.75rem;
 
   &__criterion {
     position: relative;

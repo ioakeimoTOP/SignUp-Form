@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="./src/scripts/theming.js" defer></script>
+    <script src="./src/scripts/formValidation.js" defer></script>
 
     <link rel="stylesheet" href="./src/styles/main.css" />
     <script src="./src/scripts/index.js" defer></script>
@@ -55,7 +56,7 @@
           This is definitely not a real service but you still want it. Sign Up
           now and enjoy the benefits!
         </h1>
-        <form id="signup-form" class="signup" action="">
+        <form id="signup-form" class="signup" action="" method="post">
           <h2 class="signup__heading">Let's do this!</h2>
           <ul class="signup__fieldset">
             <li class="signup__field">
@@ -179,6 +180,14 @@
                 title="Show password"
                 class="password__toggle"
               />
+              <div class="validation">
+                <span
+                  aria-hidden="false"
+                  aria-live="polite"
+                  class="password__match validation__criterion"
+                  >Passwords should match!</span
+                >
+              </div>
             </li>
           </ul>
         </form>

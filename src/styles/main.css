@@ -310,7 +310,7 @@ input {
 }
 
 .signup__field input:not([type='checkbox'])[pattern]:invalid:not(:focus) {
-  border: var(--border-size) solid red;
+  border: var(--border-size) solid orangered;
 }
 
 .signup__field input:not([type='checkbox']):focus {
@@ -411,14 +411,7 @@ input {
 
 .validation {
   font-weight: bold;
-}
 
-.validation > dt {
-  font-size: 0.85rem;
-  margin-top: 1em;
-}
-
-.validation > dd {
   font-size: 0.75rem;
 }
 
