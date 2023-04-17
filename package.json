@@ -1,8 +1,8 @@
 {
-  "name": "barebones-project-template",
+  "name": "signup-form",
   "version": "1.0.0",
-  "description": "A project template for web with the absolute basics set up.",
-  "main": "index.js",
+  "description": "An implementation of a simple web form.",
+  "main": "src/scripts/index.js",
   "scripts": {
     "scss-parse": "postcss src/styles/main.scss --parser postcss-scss --no-map --use postcss-advanced-variables postcss-nested postcss-import autoprefixer --output src/styles/main.css",
     "scss-parse:watch": "postcss src/styles/main.scss --parser postcss-scss --no-map --use postcss-advanced-variables postcss-nested postcss-import autoprefixer --output src/styles/main.css --watch",
@@ -11,7 +11,8 @@
     "prepare": "husky install"
   },
   "keywords": [
-    "template"
+    "Form",
+    "Signup"
   ],
   "author": "ioakeimo",
   "license": "MIT",
