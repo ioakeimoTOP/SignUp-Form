@@ -292,7 +292,7 @@ input {
 
 .signup__field label {
   display: block;
-  padding: 0.25em 0;
+  padding: 0.15rem 0;
 
   color: var(--text);
   font-size: var(--fs);
@@ -366,7 +366,7 @@ input {
   transform: scale(1);
 }
 
-.password {
+.password__wrapper {
   position: relative;
 }
 
@@ -376,8 +376,8 @@ input {
   cursor: pointer;
 
   position: absolute;
-  right: 1rem;
-  top: 1.75rem;
+  top: 0.3rem;
+  right: 0.7rem;
   padding: 0.5rem;
 
   border-radius: 75% 15%;
