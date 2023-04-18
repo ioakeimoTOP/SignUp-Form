@@ -49,3 +49,12 @@ confirmPassword.addEventListener('input', (e) => {
     error.classList.add('validation__criterion-satisfied');
   }
 });
+
+// Handle Submit:
+const form = document.getElementById('signup-form');
+function onFormSubmit(e) {
+  // Do nothing (can be implemented in future iterations)
+  e.preventDefault();
+  location.reload();
+}
+form.addEventListener('submit', onFormSubmit);
