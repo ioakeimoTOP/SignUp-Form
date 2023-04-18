@@ -37,7 +37,7 @@ password.addEventListener('input', (e) => {
 // Confirm password, custom validity:
 const confirmPassword = document.getElementById('confirm_password');
 confirmPassword.addEventListener('input', (e) => {
-  const error = e.target.parentElement.querySelector('.password__match');
+  const error = document.querySelector('.password__match');
 
   if (e.target.value !== password.value || !password.validity.valid) {
     e.target.setCustomValidity('Invalid field.');
