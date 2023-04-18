@@ -300,6 +300,15 @@ input {
   text-transform: uppercase;
 }
 
+.signup__field-filled input:invalid:not(:focus) {
+  border: var(--border-size) solid orangered;
+}
+
+.signup__field-filled .validation,
+.signup__field:focus-within .validation {
+  visibility: visible;
+}
+
 .signup__field input:not([type='checkbox']) {
   --border-size: 2px;
 
@@ -307,10 +316,6 @@ input {
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
   border: var(--border-size) solid #e5e7eb;
-}
-
-.signup__field input:not([type='checkbox'])[pattern]:invalid:not(:focus) {
-  border: var(--border-size) solid orangered;
 }
 
 .signup__field input:not([type='checkbox']):focus {
@@ -420,9 +425,13 @@ input {
 }
 
 .validation {
+  visibility: hidden;
   font-weight: bold;
-
   font-size: 0.75rem;
+}
+
+.validation > dd {
+  padding-left: 1em;
 }
 
 .validation__criterion {

@@ -108,6 +108,15 @@ input {
       text-transform: uppercase;
     }
 
+    &-filled input:invalid:not(:focus) {
+      border: var(--border-size) solid orangered;
+    }
+
+    &-filled .validation,
+    &:focus-within .validation {
+      visibility: visible;
+    }
+
     & input:not([type='checkbox']) {
       --border-size: 2px;
 
@@ -115,10 +124,6 @@ input {
       padding: 0.25rem 1rem;
       border-radius: 0.25rem;
       border: var(--border-size) solid #e5e7eb;
-
-      &[pattern]:invalid:not(:focus) {
-        border: var(--border-size) solid orangered;
-      }
 
       &:focus {
         outline: none;
@@ -230,9 +235,13 @@ input {
 }
 
 .validation {
+  visibility: hidden;
   font-weight: bold;
-
   font-size: 0.75rem;
+
+  & > dd {
+    padding-left: 1em;
+  }
 
   &__criterion {
     position: relative;
